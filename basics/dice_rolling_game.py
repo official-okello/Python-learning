@@ -11,9 +11,10 @@ while True:
     elif wanna_play == "y":
         number_of_rolls += 1
 
-        dice_rolls = input("How many times do you want to roll? ")
-        if dice_rolls.isdigit:
-            dice_rolls = int(dice_rolls)
+        try:
+            dice_rolls = int(input("How many times do you want to roll? "))
+        except:
+            print("Enter a valid number")
 
         numbers = []
         for _ in range(dice_rolls):
@@ -27,6 +28,5 @@ while True:
             print(numbers)
     else:
         print("invalid choice!")
-        continue
 
 print(f"You rolled the dice {number_of_rolls} times.")

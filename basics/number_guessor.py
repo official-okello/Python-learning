@@ -20,6 +20,10 @@ while True:
     guess = input(f"Enter guess between 0 and {top_of_range}: ")
     if guess.isdigit():
         guess = int(guess)
+    else:
+        print("Please a number only.")
+        continue
+
     if guess == random_num:
         print("Hurray you got it!")
         break
